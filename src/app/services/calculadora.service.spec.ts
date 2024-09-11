@@ -11,19 +11,22 @@ describe('CalculadoraService', () => {
   });
 
   it('retorna o valor correto ao subtrair dois números', () => {
-    const resultado = service.subtrair(10, 5);
-    expect(resultado).toBe(5);
+    const resultado = service.subtrair(9, 3);
+    expect(resultado).toBe(6);
   });
 
   it('retorna o valor correto ao multiplicar dois números', () => {
-    const resultado = service.multiplicar(10, 5);
-    expect(resultado).toBe(50);
+    const resultado = service.multiplicar(5, 5);
+    expect(resultado).toBe(25);
   });
 
   it('retorna o valor correto ao dividir dois números', () => {
-    const resultado = service.dividir(10, 5);
+    const resultado = service.dividir(8, 4);
     expect(resultado).toBe(2);
   });
 
+  it('lança um erro ao tentar dividir por zero', () => {
+    expect(() => service.dividir(10, 0)).toThrowError('Não é permitida a divisão por zero');
+  });
 
 });
