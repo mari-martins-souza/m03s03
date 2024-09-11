@@ -20,5 +20,10 @@ describe('CalculadoraService', () => {
     expect(resultado).toBe(50);
   });
 
+  it('retorna o valor correto ao dividir dois números', () => {
+    const resultado = service.dividir(10, 5);
+    expect(resultado).toBe(2);
+  });
+
 
 });
