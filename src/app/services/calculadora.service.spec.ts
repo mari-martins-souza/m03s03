@@ -14,4 +14,11 @@ describe('CalculadoraService', () => {
     const resultado = service.subtrair(10, 5);
     expect(resultado).toBe(5);
   });
+
+  it('retorna o valor correto ao multiplicar dois números', () => {
+    const resultado = service.multiplicar(10, 5);
+    expect(resultado).toBe(50);
+  });
+
+
 });
